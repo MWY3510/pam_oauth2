@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
-  
+
 
 jobs:
   lint:
@@ -44,13 +44,13 @@ jobs:
           ./mock_server.py &
           make
 
-  release:
-    runs-on: ubuntu-latest
-    needs: [build]
-    steps:
-      - name: release-please-action
-        uses: google-github-actions/release-please-action@v3
-        with:
-          package-name: pam_oauth2_device
-          release-type: simple
-          bump-minor-pre-major: true
+#  release:
+#    runs-on: ubuntu-latest
+#    needs: [build]
+#    steps:
+#      - name: release-please-action
+#        uses: google-github-actions/release-please-action@v3
+#        with:
+#          package-name: pam_oauth2_device
+#          release-type: simple
+#          bump-minor-pre-major: true

@@ -27,8 +27,9 @@ void Config::load(const char *path) {
       j.at("qr").at("error_correction_level").get<int>();
   qr_show =
       (j["qr"].contains("show")) ? j.at("qr").at("show").get<bool>() : true;
-  token_user_gen = 
-      (j["oauth"].contains("token_user_gen")) ? j.at("oauth").at("token_user_gen").get<bool>(): false;
+  token_user_gen = (j["oauth"].contains("token_user_gen"))
+                       ? j.at("oauth").at("token_user_gen").get<bool>()
+                       : false;
   if (j.find("ldap") != j.end() && j["ldap"].find("hosts") != j["ldap"].end()) {
     for (auto &host : j["ldap"]["hosts"]) {
       ldap_hosts.insert((std::string)host);
