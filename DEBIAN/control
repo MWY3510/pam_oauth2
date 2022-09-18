@@ -1,0 +1,5 @@
+Package: pam-openid
+Version: 1.0.0
+Architecture: 
+Maintainer: MWY3510 
+Description: Linux PAM authentication using OpenID
